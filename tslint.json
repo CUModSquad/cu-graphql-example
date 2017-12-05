@@ -1,0 +1,85 @@
+{
+  /*
+   * Possible values:
+   * - the name of a built-in config
+   * - the name of an NPM module which has a "main" file that exports a config object
+   * - a relative path to a JSON file
+   */
+  "extends": [
+    "tslint-config-airbnb"
+  ],
+  "rules": {
+    /*
+     * Any rules specified here will override those from the base config we are extending.
+     */
+    "quotemark": [
+      true,
+      "single",
+      "jsx-single",
+      "avoid-escape"
+    ],
+    "variable-name": false,
+    "no-string-literal": false,
+    "space-before-function-paren": [
+      true,
+      {
+        "anonymous":"never",
+        "named":"never",
+        "asyncArrow":"always",
+        "method":"never",
+        "constructor":"never"
+      }
+    ],
+    "object-curly-spacing": true,
+    "interface-name": [
+      true,
+      "never-prefix"
+    ],
+    "import-name": false,
+    "no-inferred-empty-object-type": true,
+    "no-floating-promises": true,
+    "no-for-in-array": true,
+    "no-misused-new": true,
+    "no-void-expression": true,
+    "await-promise": true,
+    "no-namespace": true,
+    "no-internal-module": true,
+    "no-var-requires": true,
+    "member-access": [
+      true, 
+      "check-accessor"
+    ],
+    "adjacent-overload-signatures": true,
+    "member-ordering": [
+      true, 
+      { 
+        "order": [
+          "static-field",
+          "instance-field",
+          "constructor",
+          "public-instance-method",
+          "protected-instance-method",
+          "private-instance-method"
+        ]
+      }
+    ],
+    "max-line-length": [
+      true,
+      125
+    ],
+    "no-increment-decrement": false,
+    "align": []
+  },
+  "jsRules": {
+    /*
+     * Any rules specified here will override those from the base config we are extending.
+     */
+    "curly": true
+  },
+  "rulesDirectory": [
+    /*
+     * A list of relative or absolute paths to directories that contain custom rules.
+     * See the Custom Rules documentation below for more details.
+     */
+  ]
+}

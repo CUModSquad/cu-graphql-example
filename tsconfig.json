@@ -1,0 +1,46 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "noImplicitAny": false,
+        "allowJs": true,
+        "removeComments": false,
+        "importHelpers": true,
+        "sourceMap": false,
+        "jsx": "react",
+        "module": "commonjs",
+        "noImplicitUseStrict": true,
+        "noUnusedLocals": true,
+        "alwaysStrict": false,
+        "skipLibCheck": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "forceConsistentCasingInFileNames": true,
+        "strictNullChecks": true,
+        "plugins": [
+            { "name": "tslint-language-service"}
+        ],
+        "moduleResolution": "node",
+        "lib": [
+            "esnext",
+            "dom"
+        ]
+    },
+    "formatCodeOptions": {
+        "indentSize": 2,
+        "tabSize": 2,
+        "newLineCharacter": "\r\n",
+        "convertTabsToSpaces": true,
+        "insertSpaceAfterCommaDelimiter": true,
+        "insertSpaceAfterSemicolonInForStatements": true,
+        "insertSpaceBeforeAndAfterBinaryOperators": true,
+        "insertSpaceAfterKeywordsInControlFlowStatements": true,
+        "insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+        "insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": false,
+        "placeOpenBraceOnNewLineForFunctions": false,
+        "placeOpenBraceOnNewLineForControlBlocks": false
+    },
+    "compileOnSave": false,
+    "buildOnSave": false,
+    "include": [
+      "src"
+    ]
+}
