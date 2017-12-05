@@ -1,6 +1,8 @@
 import * as React from 'react';
-import { withGraphQL, GraphQLInjectedProps } from 'camelot-unchained/lib/graphql/react';
 import styled from 'react-emotion';
+import { withGraphQL, GraphQLInjectedProps } from 'camelot-unchained/lib/graphql/react';
+import { accessLevelString } from 'camelot-unchained/lib/webAPI/helpers';
+import { AccessType } from 'camelot-unchained/lib/webAPI/definitions';
 
 import { CUQuery } from '../lib/graphql/schema';
 
@@ -29,7 +31,8 @@ class App extends React.Component<Props, State> {
           this.props.graphql.data && this.props.graphql.data.serviceStatus &&
           this.props.graphql.data.serviceStatus.servers &&
           this.props.graphql.data.serviceStatus.servers.map((server) => {
-            return <div key={server.name as string}>{server.name} | {server.status} | {server.host}</div>;
+            return <div key={server.name as string}>{server.name} | {server.status} | {server.host} 
+             | {accessLevelString(AccessType[server.accessLevel as string])} </div>;
           })
         }
       </Main>
@@ -45,6 +48,7 @@ export default withGraphQL({
           name
           status
           host
+          accessLevel
         }
       }
     }
